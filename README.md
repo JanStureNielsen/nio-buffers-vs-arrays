@@ -1,6 +1,6 @@
-# JHM NIO buffers vs arrays
+# NIO buffers vs arrays
 
-Collection of micro-benchmarks comparing the performance of the NIO buffers against primitive arrays.
+Collection of JMH micro-benchmarks comparing the performance of the NIO buffers against primitive arrays.
 
 ## Usage
 
