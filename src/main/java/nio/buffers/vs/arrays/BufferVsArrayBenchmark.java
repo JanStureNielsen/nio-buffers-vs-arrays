@@ -40,28 +40,28 @@ import org.openjdk.jmh.annotations.Warmup;
 @BenchmarkMode(Mode.SampleTime)
 public class BufferVsArrayBenchmark {
 
-	private static String data = 
-			"""
-			This is a block of data for the input stream.
-			This is a block of data for the input stream.
-			This is a block of data for the input stream.
-			This is a block of data for the input stream.
-			This is a block of data for the input stream.
-			""";
+    private static String data = 
+            """
+            This is a block of data for the input stream.
+            This is a block of data for the input stream.
+            This is a block of data for the input stream.
+            This is a block of data for the input stream.
+            This is a block of data for the input stream.
+            """;
 
-	private static InputStream is = _inputStream(data);
+    private static InputStream is = _inputStream(data);
 
-	private static InputStream _inputStream(String data) {
-		InputStream is = null;
-		try {
-			is = new ByteArrayInputStream(data.getBytes("UTF-8"));
-		} catch (UnsupportedEncodingException e) {
-		}
+    private static InputStream _inputStream(String data) {
+        InputStream is = null;
+        try {
+            is = new ByteArrayInputStream(data.getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+        }
 
-		return is;
-	}
+        return is;
+    }
 
-	@Setup(Level.Iteration)
+    @Setup(Level.Iteration)
     public void prepare() {
     }
 
